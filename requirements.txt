@@ -1,3 +1,6 @@
 Flask==3.0.3
 pre-commit==3.7.1
 flask_sqlalchemy==3.1.1
+pytest==8.2.2
+pymysql==1.1.1
+python-dotenv==1.0.1

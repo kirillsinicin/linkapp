@@ -1,7 +1,4 @@
 from hashlib import blake2b
-
-from flask import current_app
-
 from linka.model import Link
 
 

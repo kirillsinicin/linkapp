@@ -10,6 +10,19 @@ services:
     volumes:
       - "dbdata:/var/lib/postgresql/data"
 
+  mysql:
+    image: mysql
+    restart: always
+    ports:
+      - 8899:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_PASSWORD: example
+      MYSQL_USER: kiruha
+      MYSQL_DATABASE: kiruha
+    volumes:
+      - "mysql_data:/var/lib/mysql"
+
   adminer:
     image: dpage/pgadmin4
     restart: always
@@ -19,5 +32,13 @@ services:
       PGADMIN_DEFAULT_EMAIL: kiruha@kiruha.ru
       PGADMIN_DEFAULT_PASSWORD: kiruha
 
+  adminer_mysql:
+    image: adminer
+    restart: always
+    ports:
+      - 8090:8080
+
+
 volumes:
   dbdata:
+  mysql_data:

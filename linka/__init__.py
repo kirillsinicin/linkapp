@@ -1,10 +1,11 @@
+from dotenv import load_dotenv
 from flask import Flask
 
 
 def create_app(test_config=None):
-    # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://kiruha:example@localhost:8877/kiruha"
+    load_dotenv()
+    app.config.from_prefixed_env()
 
     from linka.model import db
 

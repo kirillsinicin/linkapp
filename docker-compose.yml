@@ -47,14 +47,5 @@ services:
       PGADMIN_DEFAULT_EMAIL: kiruha@kiruha.ru
       PGADMIN_DEFAULT_PASSWORD: kiruha
 
-  adminer_mysql:
-    image: adminer
-    restart: always
-    ports:
-      - 8090:8080
-
-
 volumes:
   dbdata:
-  mysql_data:
-  mysql_test_data:

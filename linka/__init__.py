@@ -11,8 +11,12 @@ def create_app(test_config=None):
 
     db.init_app(app)
 
-    from linka.views import links
+    with app.app_context():
+        db.create_all()
+
+    from linka.views import auth, links
 
     app.register_blueprint(links.bp)
+    app.register_blueprint(auth.auth_bp)
 
     return app

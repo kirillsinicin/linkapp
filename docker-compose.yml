@@ -23,6 +23,7 @@ services:
     volumes:
       - "mysql_data:/var/lib/mysql"
 
+
   mysql_test:
     image: mysql
     restart: always
@@ -35,6 +36,7 @@ services:
       MYSQL_DATABASE: testuha
     volumes:
       - "mysql_test_data:/var/lib/mysql"
+
 
   adminer:
     image: dpage/pgadmin4

@@ -1,4 +1,5 @@
 from flask import Blueprint, abort, redirect, url_for
+
 from flask.json import jsonify
 
 from linka.helpers.auth_helper import get_user_token, is_user_exist

@@ -18,7 +18,7 @@
 "name":"link_name"
 "destination":"original_link"
 ```
-2. В разделе "Authorization" выбрать тип "Bearer Token", затем вставить в поле сгенерируемый токен
+3. В разделе "Authorization" выбрать тип "Bearer Token", затем вставить в поле сгенерируемый токен
 4. Отправить запрос
 > После чего вы получите ссылку, которая будет перенаправлять на оригинальный адрес
 > Пример [ссылки](https://kirillsinitsin.pythonanywhere.com/links/2fafe1ef7c), которая ведёт на этот проект.
